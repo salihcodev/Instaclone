@@ -1,3 +1,8 @@
+import * as firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/storage';
+import 'firebase/analytics';
+
 var firebaseConfig = {
   apiKey: 'AIzaSyDjI9Il8RXRamyylXl4_9FBTVqrCq5iOk8',
   authDomain: 'instaclone-101f8.firebaseapp.com',
@@ -11,3 +16,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+
+export const storage = firebase.storage();
+export const firestore = firebase.firestore();
+export const timeStamp = firebase.firestore.FieldValue.serverTimestamp;

@@ -1,10 +1,20 @@
+// BASIC:
 import React from 'react';
-import Title from './components/Title';
 
+// COMPONENTS:
+import Title from './components/title/Title.component';
+import UploadForm from './components/upload-form/UploadForm.component';
+import ImagesPreview from './components/images-preview/ImagesPreview.component';
+
+// UTILITIES:
+
+// ROOT COMPONENT:=>
 function App() {
   return (
     <div className="App">
-      <Title/>
+      <Title />
+      <UploadForm />
+      <ImagesPreview />
     </div>
   );
 }
