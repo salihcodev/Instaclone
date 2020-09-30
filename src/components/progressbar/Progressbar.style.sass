@@ -1,0 +1,25 @@
+.progressbar
+  background: var(--loader)
+  height: 0.30rem
+  margin-bottom: -4px
+  position: relative
+
+  span.loader
+    display: block
+    border: 2px solid
+    width: 1.5rem
+    height: 1.5rem
+    border-radius: 50%
+    position: absolute
+    top: 1rem
+    border-left-color: transparent
+    animation: loader 0.4s infinite linear
+
+@keyframes loader
+  0%
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)

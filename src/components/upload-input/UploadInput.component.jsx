@@ -1,5 +1,6 @@
 // BASIC:
 import React from 'react';
+import './UploadInput.style.sass';
 
 // UTILITIES:
 

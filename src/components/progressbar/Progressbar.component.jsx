@@ -1,4 +1,5 @@
 import React from 'react';
+import './Progressbar.style.sass';
 import useStorage from '../../hooks/useStorage.hook';
 
 function Progressbar({ file, setFile }) {
@@ -8,17 +9,16 @@ function Progressbar({ file, setFile }) {
     if (url) setFile(null);
   }, [url]);
 
-  console.log(progress, url);
-
   return (
     <div
       className="progressbar"
       style={{
         width: `${progress}%`,
-        background: 'burlywood',
-        height: '0.25rem',
       }}
-    ></div>
+    >
+
+      <span className="loader"></span>
+    </div>
   );
 }
 

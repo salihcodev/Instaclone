@@ -1,5 +1,6 @@
 // BASIC:
 import React from 'react';
+import './UploadForm.style.sass';
 
 // COMPONENTS:
 import UploadInput from '../upload-input/UploadInput.component';
@@ -27,17 +28,21 @@ const UploadForm = () => {
   };
 
   return (
-    <>
+    <section className="upload-center">
+      {/* FORM */}
       <form>
         <UploadInput uploadHandler={uploadHandler} />
       </form>
 
-      <section className="upload-result">
+      {/* upload viewer */}
+      <div className="upload-viewer">
         {error && <p className="error-message">{error}</p>}
-        {file && <h3 className="file-name">{file.name}</h3>}
+        {file && (
+          <h3 className="file-name">Uploading your file: {file.name} now...</h3>
+        )}
         {file && <Progressbar file={file} setFile={setFile} />}
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

@@ -1,0 +1,29 @@
+
+.upload-input
+  color: transparent
+  outline: 0
+  &::-webkit-file-upload-button
+    visibility: hidden
+
+  &::before
+    content: 'Upload Image'
+    color: black
+    display: inline-block
+    background: var(--primary)
+    border: none
+    border-radius: 3px
+    padding: 1rem 2rem
+    outline: none
+    -webkit-user-select: none
+    cursor: pointer
+    font-weight: bolder
+    color: #ddd
+
+  ::before:hover
+    border-color: black
+
+  &:active
+    outline: 0
+
+  &:active::before
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9)
